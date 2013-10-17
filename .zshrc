@@ -7,7 +7,7 @@ ZSH=$HOME/git/myconfig/oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="random"
-
+#ZSH_THEME="gallois"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
