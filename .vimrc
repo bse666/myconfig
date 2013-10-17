@@ -3,6 +3,7 @@
 " Description: my first vimrc with a little tweaks here and there.
 " Last Modified: September 22, 2013
 "
+
 " This must be first, because it changes other options as side effect
 set nocompatible
 " Use pathogen to easily modify the runtime path to include all
@@ -24,6 +25,26 @@ set background=dark " dark | light "
 colorscheme solarized
 call togglebg#map("<F5>")
 filetype plugin on
+
+set ts=4 sts=4 sw=4 expandtab
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Enable file type detection
+  filetype on
+   
+  " Syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+   
+  " Customisations based on house-style (arbitrary)
+  autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+   
+  " Treat .rss files as XML
+  autocmd BufNewFile,BufRead *.rss setfiletype xml
+endif
 
 set cursorline
 set colorcolumn=80
