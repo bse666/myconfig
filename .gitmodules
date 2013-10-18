@@ -16,3 +16,6 @@
 [submodule "vim/bundle/vim-misc"]
 	path = vim/bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "urxvt-perls"]
+	path = urxvt-perls
+	url = https://github.com/muennich/urxvt-perls.git

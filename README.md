@@ -1,14 +1,23 @@
-#Configuration files for my desktops
+# Configuration files for my desktops:
 
 Solarized for my belongings.
 
 ##features
 * [awesome](http://awesome.naquadah.org)
+** [awesome-solarized](https://github.com/cycojesus/awesome-solarized)
 * [i3](http://i3wm.org)
 * [ncmpcpp](http://ncmpcpp.rybczak.net/)
+* [urxvt]() bla()
 * [vim](http://www.vim.org)
 * [zsh](http://zsh.sourceforge.net/)
   * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+## Submodules used
+
+* urxvt-perls
+* vim/bundle/vim-colors-solarized
+* vim/bundle/vim-misc
+* vim/bundle/vim-notes
 
 ##installation
 * beware of damage to your active configs my install script !!! deletes !!!

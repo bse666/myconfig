@@ -8,6 +8,16 @@ Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
  
+
+!-------------------------------------------------------------------------------
+! URxvt addons
+!-------------------------------------------------------------------------------
+! perls lib für viele addons siehe: https://github.com/muennich/urxvt-perls
+! kompletter pfad wird verlangt.
+ URxvt.perl-lib: /home/bse/git/myconfig/urxvt-perls/
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+
 !-------------------------------------------------------------------------------
 ! URxvt settings
 ! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
@@ -44,7 +54,7 @@ URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
  
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
 URxvt.matcher.button: 1
 URxvt.urlLauncher: firefox
  
