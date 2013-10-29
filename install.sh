@@ -1,6 +1,6 @@
 #!/bin/sh
 ## install packages
-#apt-get install awesome awesome-extras rxvt-unicode luakit firefox mpd ncmpcpp \
+#apt-get install awesome awesome-extra rxvt-unicode luakit firefox mpd ncmpcpp \
 #git claws-mail puppet pioneers vlc atool ranger tmux \
 #vim-puppet zsh -yy
 
