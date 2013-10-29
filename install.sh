@@ -1,8 +1,8 @@
 #!/bin/sh
 ## install packages
-#apt-get install awesome awesome-extras rxvt-unicode luakit firefox mpd ncmpcpp\
-#git claws-mail claws-mail-il8n puppet? pioneers vlc atool ranger tmux\
-#vim-puppet zsh
+#apt-get install awesome awesome-extras rxvt-unicode luakit firefox mpd ncmpcpp \
+#git claws-mail puppet pioneers vlc atool ranger tmux \
+#vim-puppet zsh -yy
 
 git submodule init
 git submodule update
