@@ -64,4 +64,26 @@ alias 'filecount=ls -aRF | wc -l'
 # file related
 
 alias 'lsth=ls -tlh|head'
+alias 'wget=wget -c'
+alias cp='cp -i'
+alias rm='rm -i'
+
+# quickly cd out of directories using numbers
+# usage: up 2 -- same as cd ../../
+up() { local x='';for i in $(seq ${1:-1});do x="$x../"; done;cd $x; }
+#}}}
+
+#-------- Listing Files {{{
+#------------------------------------------------------
+alias lsd='ls -1d */'        # ls folders only
+alias l='ls -l'
+alias lst='ls -Ggthrc'        # list by time and change, newest at bottom
+alias lsa='ls -GghA'
+# list and grep
+lsg() {
+        keyword=$(echo "$@" |  sed 's/ /.*/g')
+        ls -GgthrA | grep -iE $keyword
+}
+
+#}}}
 
