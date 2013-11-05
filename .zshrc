@@ -61,5 +61,7 @@ alias lh='ls -a | egrep "^\."'
 alias 'wordy=wc -w * | sort | tail -n10'
 alias 'filecount=ls -aRF | wc -l'
 
+# file related
 
+alias 'lsth=ls -tlh|head'
 
