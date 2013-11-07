@@ -22,7 +22,7 @@ URxvt.fading: 0
 URxvt.urgentOnBell: true
 ! URxvt.visualBell: true
 URxvt.loginShell: true
-URxvt.saveLines: 50
+URxvt.saveLines: 5000
 URxvt.internalBorder: 3
 URxvt.lineSpace: 0
 ! fix strg-shift update
@@ -30,10 +30,10 @@ URxvt.iso14755: false
 
 ! Fonts
 URxvt.allow_bold: false
-! /* URxvt.font: -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt.font: -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1
 ! URxvt*font: xft:Monospace:pixelsize=12
 ! URxvt*boldFont: xft:Monospace:pixelsize=12
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=11
+! URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=11
 URxvt*inheritPixmap: false 
 
 ! Fix font space
@@ -44,7 +44,7 @@ URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
  
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,font-size
 URxvt.matcher.button: 1
 URxvt.urlLauncher: firefox
  
@@ -55,6 +55,12 @@ URxvt.cursorUnderline: false
  
 ! Pointer
 URxvt.pointerBlank: true
+
+! Keys for font+++
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
