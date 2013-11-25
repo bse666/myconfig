@@ -439,4 +439,5 @@ end
 
 run_once("mpd")
 run_once("luakit")
+run_once("xfce4-power-manager")
 -- }}}
