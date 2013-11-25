@@ -17,6 +17,7 @@ rm $HOME/.vimrc; ln -s $CURRENTDIR/.vimrc $HOME/.vimrc
 rm -rf $HOME/.config/awesome; ln -s $CURRENTDIR/awesome $HOME/.config/awesome
 rm -rf $HOME/.ncmpcpp; ln -s $CURRENTDIR/ncmpcpp $HOME/.ncmpcpp
 rm -rf $HOME/.i3; ln -s $CURRENTDIR/i3 $HOME/.i3
+rm -rf $HOME/.irssi; ln -s $CURRENTDIR/irssi $HOME/.irssi
 
 rm -rf $HOME/.vim; ln -s $CURRENTDIR/vim $HOME/.vim
 
