@@ -7,7 +7,7 @@ require("beautiful")
 -- Notification library
 require("naughty")
 -- Volume bar
---require("volume")
+require("volume")
 -- Vicious for widgets
 require("vicious")
 -- ror
@@ -113,6 +113,7 @@ mytextclock = awful.widget.textclock({ align = "right" })
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
+
 -- Battery Widget
 batwidget = widget({ type = "textbox" })
 vicious.register(batwidget, vicious.widgets.bat, 
@@ -201,6 +202,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
 		batwidget,
+		volume_widget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -264,6 +266,14 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
+
+    -- Volume Keys
+    awful.key({ }, "XF86AudioRaiseVolume", function ()
+    awful.util.spawn("amixer set Master 9%+") end),
+    awful.key({ }, "XF86AudioLowerVolume", function ()
+    awful.util.spawn("amixer set Master 9%-") end),
+    awful.key({ }, "XF86AudioMute", function ()
+    awful.util.spawn("amixer sset Master toggle") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
