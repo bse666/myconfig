@@ -36,6 +36,8 @@ set ts=4 sts=4 sw=4 expandtab
 if has("autocmd")
   " Enable file type detection
   filetype on
+  autocmd filetype html,xml set listchars-=tab:>.
+  autocmd filetype python set expandtab
    
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
@@ -80,12 +82,12 @@ set nobackup
 set noswapfile
 
 filetype plugin indent on
-autocmd filetype python set expandtab
+
 " set out tab, spaces visually
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
-autocmd filetype html,xml set listchars-=tab:>.
+
 " Paste Mode for pasting more Text at once (use in insert mode)
 set pastetoggle=<F2>
 
