@@ -15,6 +15,14 @@ let mapleader=","
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" jekyll blog settings
+let g:jekyll_path = "$HOME/git/blog"
+" Jekyll Bundle mappings
+map <Leader>jn  :JekyllPost<CR>
+map <Leader>jl  :JekyllList<CR>
+map <Leader>jc  :JekyllCommit<CR>
+map <Leader>jp  :JekyllPublish<CR>
 set hidden
 
 " vimboy plugin
