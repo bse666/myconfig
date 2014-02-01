@@ -221,7 +221,7 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-	awful.key({ modkey }, "F11", function () awful.util.spawn("slock") end),
+	awful.key({ modkey }, "F12", function () awful.util.spawn("slock") end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -437,8 +437,11 @@ function run_once(cmd)
   end
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
-
+run_once("xrdb -merge $HOME/.Xresources")
+run_once("firefox")
 run_once("mpd")
 run_once("luakit")
 run_once("xfce4-power-manager")
+-- run_once("urxvt")
+
 -- }}}
