@@ -1,4 +1,7 @@
 *.swp
+ranger/history
+ranger/bookmarks
+ranger/tagged
 irssi/config
 vim/.netrwhist
 solarized/
