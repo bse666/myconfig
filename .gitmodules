@@ -22,3 +22,9 @@
 [submodule "vim/bundle/jekyll.vim"]
 	path = vim/bundle/jekyll.vim
 	url = https://github.com/csexton/jekyll.vim.git
+[submodule "awesome/awesome-copycats"]
+	path = awesome/awesome-copycats
+	url = https://github.com/copycat-killer/awesome-copycats.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git

@@ -25,6 +25,11 @@ map <Leader>jc  :JekyllCommit<CR>
 map <Leader>jp  :JekyllPublish<CR>
 set hidden
 
+" toggle Tagbar with 'l'
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
+
+
 " vimboy plugin
 au bufread,bufnewfile ~/wiki/* set ft=vimboy
 " notes plugin
