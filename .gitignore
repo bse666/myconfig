@@ -1,4 +1,5 @@
 *.swp
+ranger/*.pyo
 ranger/history
 ranger/bookmarks
 ranger/tagged
