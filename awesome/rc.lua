@@ -13,6 +13,11 @@ require("vicious")
 -- ror
 -- load the 'run or raise' function
 local ror = require("aweror")
+-- blinking for the widgets
+require("blinkers")
+
+-- revelation - exposé like behavior
+require("revelation")
 
 
 
@@ -46,11 +51,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init(awful.util.getdir("config") .. "/themes/awesome-solarized/dark/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/awesome-solarized/light/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
-editor = os.getenv("EDITOR") or "editor"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -126,6 +131,7 @@ vicious.register(batwidget, vicious.widgets.bat,
         return formatstring
 end, 60, "BAT0")
 
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -190,6 +196,7 @@ for s = 1, screen.count() do
                                               return awful.widget.tasklist.label.currenttags(c, s)
                                           end, mytasklist.buttons)
 
+
     -- Create the wibox
     mywibox[s] = awful.wibox({ position = "top", screen = s })
     -- Add widgets to the wibox - order matters
@@ -202,8 +209,8 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
-		batwidget,
-		volume_widget,
+        s ==1 and batwidget or nil,
+        volume_widget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -225,6 +232,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
+    awful.key({ modkey,           }, "e", revelation),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -437,7 +445,7 @@ function run_once(cmd)
   end
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
-run_once("xrdb -merge $HOME/.Xresources")
+run_once("xrdb -DSOLARIZED_LIGHT -merge $HOME/.Xresources")
 run_once("firefox")
 run_once("mpd")
 run_once("luakit")
@@ -445,3 +453,4 @@ run_once("xfce4-power-manager")
 -- run_once("urxvt")
 
 -- }}}
+
